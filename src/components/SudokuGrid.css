@@ -1,0 +1,55 @@
+.sudoku-container {
+    text-align: center;
+    padding: 20px;
+    padding-inline: 50px;
+    border: 3px solid black;
+  }
+  
+  input[disabled] {
+    background-color: #edebeb;
+  }
+  
+  .grid-table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    border: 3px solid black;
+
+  }
+  
+  .grid-table td {
+    padding: 0px;
+  }
+  
+  .grid-table input {
+    width: 30px;
+    height: 30px;
+    text-align: center;
+  }
+  .grid-table td:nth-child(3n) {
+    border-right: 3px solid black;
+  }
+  
+  .grid-table tr:nth-child(3n) td {
+    border-bottom: 3px solid black;
+  }
+  .invalid {
+    border: 2px solid red;
+    background-color: #ffcccc;
+  }
+  fixed {
+    font-weight: bold;
+  }
+  button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-inline: 20px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }
+  

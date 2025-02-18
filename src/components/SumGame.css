@@ -1,0 +1,85 @@
+/* SumGame.css */
+.sum-game-container {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    text-align: center;
+    padding: 20px;
+    background-color: #f4f4f9;
+    border-radius: 8px;
+    width: auto;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .sum-game-container h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+  table td {
+    border: 1px solid #01335b;
+    padding: 0px;
+    text-align: center;
+    font-size: 25px;
+    width: 70px;
+    height: 70px;
+  }
+  
+  input {
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    font-size: 18px;
+    border: none;
+    background-color: #f0f0f0;
+    transition: background-color 0.3s;
+  }
+  
+  input:focus {
+    outline: none;
+    background-color: #e0e0e0;
+  }
+  
+  .fixed {
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    background-color: #01335b;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .fixed.green {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
+  input[type='number'] {
+    text-align: center;
+  }
+  
+  table td input {
+    background-color: transparent;
+    padding: 0;
+  }
+  
+  table tr:first-child td {
+    font-weight: bold;
+  }
+  
+  table tr:first-child td.fixed {
+    background-color: #e0e0e0;
+  }
+  
+  .green {
+    background-color: #4CAF50;
+    color: white;
+  }
+  
