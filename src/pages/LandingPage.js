@@ -6,6 +6,8 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import sudokuImage from '../assets/sudoku.png';
 import kakuroImage from '../assets/kakuro.png';
 import headerIcon from '../assets/headericon.png';
+import slideSortIcon from '../assets/slide&sort.png';
+
 
 // Header component
 const Header = () => {
@@ -44,9 +46,14 @@ function LandingPage() {
           gamePath="/game/sudoku" 
         />
         <GameBlock 
-          gameName="Sum Game"
+          gameName="Kakuro"
           gameImage={kakuroImage}
-          gamePath="/game/sumGame" 
+          gamePath="/game/kakuro" 
+        />
+        <GameBlock 
+          gameName="Slide & Sort"
+          gameImage={slideSortIcon}
+          gamePath="/game/slide&sort" 
         />
       </div>
     </div>

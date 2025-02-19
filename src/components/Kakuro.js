@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import './SumGame.css'; // Import the CSS file
+import './Kakuro.css'; // Import the CSS file
 
 function SumGame() {
   const rows = 4;
@@ -113,9 +113,9 @@ function shuffleArray(array) {
   };
 
   return (
-    <div className="sum-game-container">
+    <div className="kakuro-game-container">
       <h2>Sum Game</h2>
-      <table>
+      <table className='kakuro-table'>
         <tbody>
           {grid.map((row, rowIndex) => (
             <tr key={rowIndex}>
@@ -143,6 +143,7 @@ function shuffleArray(array) {
           ))}
         </tbody>
       </table>
+      <button className='sumGame-button'>New Game</button>
     </div>
   );
 }

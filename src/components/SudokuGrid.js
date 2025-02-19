@@ -104,34 +104,49 @@ function SudokuGrid() {
   };
 
   return (
-    <div className="sudoku-container">
-      <h1>9x9 SUDOKU</h1>
-      <table className="grid-table">
-        <tbody>
-          {grid.map((row, rowIndex) => (
-            <tr key={rowIndex}>
-              {row.map((cell, colIndex) => (
-                <td key={colIndex}>
-                  <input
-                    type="text"
-                    value={cell}
-                    onChange={(e) => handleChange(e, rowIndex, colIndex)}
-                    className={
-                      // Highlight invalid rows or columns and fixed cells
-                      `${(invalidRows.includes(rowIndex) || invalidCols.includes(colIndex)) ? "invalid" : ""} ${fixedCells[rowIndex][colIndex] ? "fixed" : ""}`
-                    }
-                    maxLength="1" // Allow only single digit input
-                    disabled={fixedCells[rowIndex][colIndex]} // Disable input if the cell is pre-filled
-                  />
-                </td>
-              ))}
-            </tr>
-          ))}
-        </tbody>
-      </table>
-      <button onClick={handleCheck}>Check</button>
-      <button onClick={loadPuzzle}>New Sudoku</button>
-      <p dangerouslySetInnerHTML={{ __html: feedback }}></p>
+    <div className="game-container">
+      <div className="sudoku-container">
+        <table className="sudoku-grid-table">
+          <tbody>
+            {grid.map((row, rowIndex) => (
+              <tr key={rowIndex}>
+                {row.map((cell, colIndex) => (
+                  <td key={colIndex}>
+                    <input
+                      type="text"
+                      value={cell}
+                      onChange={(e) => handleChange(e, rowIndex, colIndex)}
+                      className={
+                        // Highlight invalid rows or columns and fixed cells
+                        `${(invalidRows.includes(rowIndex) || invalidCols.includes(colIndex)) ? "invalid" : ""} ${fixedCells[rowIndex][colIndex] ? "fixed" : ""}`
+                      }
+                      maxLength="1" // Allow only single digit input
+                      disabled={fixedCells[rowIndex][colIndex]} // Disable input if the cell is pre-filled
+                    />
+                  </td>
+                ))}
+              </tr>
+            ))}
+          </tbody>
+        </table>
+        <button onClick={handleCheck} className="sudoku-button">Check</button>
+        <button onClick={loadPuzzle} className="sudoku-button">New Sudoku</button>
+        <p dangerouslySetInnerHTML={{ __html: feedback }}></p>
+      </div>
+      <div className="rules-container">
+        <h2>Game Rules</h2>
+        <ul>
+          <li><strong>Grid Structure:</strong> A 9x9 grid consisting of 81 cells. Each cell can contain a number from 1 to 9.</li>
+          <li><strong>Sub-Grids:</strong> The grid is divided into 9 smaller 3x3 sub-grids.</li>
+          <li><strong>Initial Numbers:</strong> Some cells are pre-filled with numbers and cannot be changed.</li>
+          <li><strong>Valid Numbers in Rows:</strong> Each row must contain the numbers 1 to 9, without repetition.</li>
+          <li><strong>Valid Numbers in Columns:</strong> Each column must also contain the numbers 1 to 9, with no duplicates.</li>
+          <li><strong>Valid Numbers in Sub-Grids:</strong> Each 3x3 sub-grid must contain the numbers 1 to 9, with no duplicates.</li>
+          <li><strong>No Duplicates:</strong> A number can appear only once in each row, column, and sub-grid.</li>
+          <li><strong>Goal:</strong> The objective is to fill in the empty cells such that every row, column, and sub-grid contains the numbers 1-9 without repetition.</li>
+        </ul>
+      </div>
+
     </div>
   );
 }

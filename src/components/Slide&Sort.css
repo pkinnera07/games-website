@@ -1,0 +1,49 @@
+
+.slidesort-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(3, 100px);
+    grid-template-rows: repeat(3, 100px);
+    gap: 5px;
+    width: 315px;
+    height: 315px;
+    background-color: #333;
+    border: 2px solid #000;
+    position: relative;
+}
+
+.block {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+    font-weight: bold;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    text-align: center;
+    cursor: pointer;
+}
+
+button {
+    width: 100px;
+    margin: 20px;
+}
+
+.empty {
+    background-color: #ccc;
+    border: none;
+}
+
+.congrats {
+    font-size: 24px;
+    color: green;
+    margin-top: 20px;
+}

@@ -1,18 +1,6 @@
 .landing-page {
     text-align: center;
-    padding: 20px;
-  }
-
-  .header {
-    display: flex;
-    height: 100px;
-    width: auto;
-    padding:10px;
-    border:solid 3px #004688a4;
-
-  }
-  .header-image {
-    height: 100px;
+    padding: 0px;
   }
 
   .website-title {
