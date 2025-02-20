@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback} from 'react';
 import './Slide&Sort.css';
 
 const Game = () => {
@@ -6,11 +6,7 @@ const Game = () => {
   //const [emptyCell, setEmptyCell] = useState(null);
   const [congratsMessage, setCongratsMessage] = useState('');
 
-  useEffect(() => {
-    initializeGrid();
-  }, []);
-
-  const initializeGrid = () => {
+  const initializeGrid = useCallback(() => {
     let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
     let newBlocks = [];
 
@@ -26,7 +22,11 @@ const Game = () => {
     setBlocks(newBlocks);
     shuffleGrid(newBlocks);
     setCongratsMessage('');
-  };
+  }, []);
+
+  useEffect(() => {
+    initializeGrid();
+  }, [initializeGrid]);
 
   const shuffleGrid = (newBlocks) => {
     let shuffleMoves = 50; // Number of moves to shuffle

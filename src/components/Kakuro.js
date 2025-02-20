@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useCallback } from 'react';
 import './Kakuro.css'; // Import the CSS file
+
 
 function SumGame() {
   const rows = 4;
@@ -18,7 +19,7 @@ function SumGame() {
   }
 
   // Function to generate a new puzzle grid
-  const generateNewPuzzle = () => {
+  const generateNewPuzzle =useCallback(() =>  {
     const newGrid = [];
     const solutionGrid = [];
     
@@ -92,12 +93,12 @@ function SumGame() {
     // Display the empty grid (this is for user interaction)
     setGrid(emptyGrid);
     setCongratsMessage(""); // Clear congrats message when starting a new game
-  };
+  }, []);
 
   // Initialize the grid when the component mounts
   useEffect(() => {
     generateNewPuzzle();
-  }, []);
+  }, [generateNewPuzzle]);
 
   // Handle input change and check row and column totals
   const handleInputChange = (rowIdx, colIdx, event) => {

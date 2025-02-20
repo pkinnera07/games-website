@@ -3,7 +3,6 @@ import { useParams } from "react-router-dom";
 import SudokuGrid from "../components/SudokuGrid"; // Import SudokuGrid component
 import Kakuro from "../components/Kakuro"; // Import SudokuGrid component
 import SlideSort from "../components/Slide&Sort"; // Import SudokuGrid component
-import headerIcon from '../assets/headericon.png';
 import logo from '../assets/logo.png';
 
 

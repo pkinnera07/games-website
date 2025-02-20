@@ -56,7 +56,6 @@ h2{
     border-bottom: 3px solid black;
   }
   .invalid {
-    border: 2px solid red;
     background-color: #ffcccc;
   }
   input.fixed {

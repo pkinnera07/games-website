@@ -113,6 +113,8 @@ function SudokuGrid() {
     setInvalidRows([]);
     setInvalidCols([]);
     setInvalidSubgrid(false);
+    let result='';
+    setFeedback(result);
   };
 
   return (
@@ -132,7 +134,9 @@ function SudokuGrid() {
                       onChange={(e) => handleChange(e, rowIndex, colIndex)}
                       className={
                         // Highlight invalid rows or columns and fixed cells
-                        `${(invalidRows.includes(rowIndex) || invalidCols.includes(colIndex)) ? "invalid" : ""} ${fixedCells[rowIndex][colIndex] ? "fixed" : ""}`
+                        `${(invalidRows.includes(rowIndex) || invalidCols.includes(colIndex)) ? "invalid" : ""} 
+                        ${invalidSubgrid ? "invalid-subgrid" : ""}
+                        ${fixedCells[rowIndex][colIndex] ? "fixed" : ""}`
                       }
                       maxLength="1" // Allow only single digit input
                       disabled={fixedCells[rowIndex][colIndex]} // Disable input if the cell is pre-filled
@@ -143,9 +147,9 @@ function SudokuGrid() {
             ))}
           </tbody>
         </table>
+        <p dangerouslySetInnerHTML={{ __html: feedback }}></p>
         <button onClick={handleCheck} className="sudoku-button">Check</button>
         <button onClick={loadPuzzle} className="sudoku-button">New Sudoku</button>
-        <p dangerouslySetInnerHTML={{ __html: feedback }}></p>
       </div>
       <div className="rules-container">
         <h2>Game Rules</h2>
