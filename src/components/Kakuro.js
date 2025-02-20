@@ -23,7 +23,7 @@ function SumGame() {
     const solutionGrid = [];
     
     const values = [1, 2, 3, 4, 5, 6, 7, 8, 9]; // Array of numbers 1 to 9
-    shuffleArray(values); // Shuffle the values array to randomize the order
+    shuffleArray(values);
 
     // Generate the grid with unique random values for the 9 editable cells
     for (let i = 0; i < rows; i++) {
