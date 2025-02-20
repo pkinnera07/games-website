@@ -112,7 +112,6 @@ const Game = () => {
 
   return (
     <div className="slidesort-container">
-      <h1 className="game-title">Slide & Sort</h1> {/* Added the game name */}
       <div className="grid">
         {blocks.map((block, index) => (
           <div

@@ -4,6 +4,8 @@ import SudokuGrid from "../components/SudokuGrid"; // Import SudokuGrid componen
 import Kakuro from "../components/Kakuro"; // Import SudokuGrid component
 import SlideSort from "../components/Slide&Sort"; // Import SudokuGrid component
 import headerIcon from '../assets/headericon.png';
+import logo from '../assets/logo.png';
+
 
 
 function GamePage() {
@@ -13,8 +15,8 @@ function GamePage() {
 const Header = () => {
   return (
     <div className="header">
-      <img src={headerIcon} alt="Games Website" className="header-image" />
-      <h1 className="website-title">{name}</h1>
+      <img src={logo} alt="Games Website" className="header-image" />
+      <h1 className="game-title">{name}</h1>
     </div>
   );
 };

@@ -2,33 +2,66 @@
     text-align: center;
     padding: 0px;
   }
-
+.site-layout {
+  display: flex;
+  padding: 20px;
+}
+.welcome{
+  padding: 20px;
+}
+.captions{
+  width: 40%;
+  height: 400px;
+  align-items: center;
+}
+.logo-image {
+  height: 80%;
+}
+.cap1 {
+  text-align: left;
+  font-size: 20px;
+  font-weight: bold;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  margin: 20px;
+}
+.cap2 {
+  text-align: right;
+  font-size: 40px;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-weight: bolder;
+  margin: 20px;
+}
+.cap3 {
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  font-family:cursive;
+  margin: 20px;
+}
   .website-title {
     flex-grow: 1;
     text-align: left;
     align-self: center;
-    font-size: 30px;
-    height: 35px;
-    background-color: #00438248;
+    font-size: 50px;
+    height: 45px;
+    color:azure;
+    background-color: transparent;
   }
 
   .search {
     width: 250px;
     align-self: center;
     height: 33px;
-    background-color: #00438248;
+    margin-right: 30px;
+    background-color: #e3eaf1dd;
+    border-radius: 15px;
   }
   .search:focus {
     background-color: white;
   }
-  .search-icon {
-    align-self: center;
-    height: 35px;
-    background-color: #00438248;
-  }
-h1 {
-    font-size: 36px;
-    margin-bottom: 20px;
+.welcome {
+    font-size: 40px;
+    margin-bottom: 10px;
   }
   
 ul {
@@ -40,10 +73,9 @@ li {
     margin: 10px 0;
     }
 .game-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    display: flex;
     gap: 20px;
-    padding: 20px;
+    flex-grow: 1;
 }
 
 .game-block {
@@ -64,3 +96,4 @@ li {
     object-fit: cover;
     border-radius: 10px;
 }
+

@@ -4,7 +4,6 @@
     margin: 0 auto;
     text-align: center;
     padding: 20px;
-    background-color: #f4f4f9;
     border-radius: 8px;
     width: auto;
     box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
@@ -19,7 +18,7 @@
   .kakuro-table {
     margin: 0 auto;
     border-collapse: collapse;
-    width: 50vw;
+    width: auto;
   }
   
   table td {

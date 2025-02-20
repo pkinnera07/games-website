@@ -1,22 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import './LandingPage.css'; 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import sudokuImage from '../assets/sudoku.png';
 import kakuroImage from '../assets/kakuro.png';
-import headerIcon from '../assets/headericon.png';
+import logo from '../assets/logo.png';
+import logoText from '../assets/logotext.png';
 import slideSortIcon from '../assets/slide&sort.png';
 
-
 // Header component
-const Header = () => {
+const Header = ({ onSearch }) => {
   return (
     <div className="header">
-      <img src={headerIcon} alt="Games Website" className="header-image" />
-      <h2 className="website-title">Game Zone</h2>
-      <input className="search" type="text" placeholder="Search your Favourite Game"></input>
-      <FontAwesomeIcon icon={faSearch} size="lg" className="search-icon"/>
+      <img src={logo} alt="Games Website" className="header-image" />
+      <h2 className="website-title">Game Dimension</h2>
+      <input 
+        className="search" 
+        type="text" 
+        placeholder="Search your Favourite Game" 
+        onChange={e => onSearch(e.target.value)} // Trigger search on input change
+      />
     </div>
   );
 };
@@ -34,27 +36,39 @@ const GameBlock = ({ gameName, gameImage, gamePath }) => {
 };
 
 function LandingPage() {
+  // State to hold search query
+  const [searchQuery, setSearchQuery] = useState("");
+
+  // Array of game data
+  const games = [
+    { gameName: "Sudoku", gameImage: sudokuImage, gamePath: "/game/sudoku" },
+    { gameName: "Kakuro", gameImage: kakuroImage, gamePath: "/game/kakuro" },
+    { gameName: "Slide & Sort", gameImage: slideSortIcon, gamePath: "/game/slide&sort" }
+  ];
+
+  // Filter games based on search query (case-insensitive)
+  const filteredGames = games.filter(game =>
+    game.gameName.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div className="landing-page">
-      <Header />
-
-      <h1>Welcome to the Game Website</h1>
-      <div className="game-grid">
-        <GameBlock 
-          gameName="Sudoku" 
-          gameImage={sudokuImage}
-          gamePath="/game/sudoku" 
-        />
-        <GameBlock 
-          gameName="Kakuro"
-          gameImage={kakuroImage}
-          gamePath="/game/kakuro" 
-        />
-        <GameBlock 
-          gameName="Slide & Sort"
-          gameImage={slideSortIcon}
-          gamePath="/game/slide&sort" 
-        />
+      <Header onSearch={setSearchQuery} /> {/* Pass search handler to Header */}
+      <div className="site-layout">
+        <div className="captions">
+          <h1 className="welcome">Welcome to</h1>
+          <img src={logoText} alt="Games Website" className="logo-image" />
+        </div>
+        <div className="game-grid">
+          {filteredGames.map((game, index) => (
+            <GameBlock 
+              key={index} 
+              gameName={game.gameName} 
+              gameImage={game.gameImage} 
+              gamePath={game.gamePath} 
+            />
+          ))}
+        </div>
       </div>
     </div>
   );

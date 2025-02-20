@@ -10,14 +10,13 @@
     margin-top: 20px;
   }
   .rules-container {
-    width: 35vw;
+    width: auto;
     height: auto;
-    margin-top: 20px;
+    margin: 20px;
     padding: 10px;
     overflow-y: auto;
     text-align: left;
     border: 3px solid black;
-
   }
   
 h2{

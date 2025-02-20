@@ -1,16 +1,27 @@
+* {
+  margin: 0;
+}
 body {
   font-family: Arial, sans-serif;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+  background-color: rgba(216, 227, 238, 0.9);
+
 }
 .header {
   display: flex;
   height: 100px;
   width: auto;
   padding:10px;
-  border:solid 3px #004688a4;
-
+  background-color: rgb(0, 16, 32);
 }
 .header-image {
   height: 100px;
+}
+
+.logo-image {
+  height: 200px;
 }
 
 .game-page {
@@ -20,11 +31,14 @@ body {
   align-items: center;
 }
 
-.game-page h1 {
-  font-size: 32px;
-  margin-bottom: 20px;
+.game-title {
+  flex-grow: 1;
+  text-align: left;
+  align-self: center;
+  font-size: 50px;
+  height: 55px;
+  color:azure;
 }
-
 h3 {
   margin-top: 10px;
   font-size: 20px;
