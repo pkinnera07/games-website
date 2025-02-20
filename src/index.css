@@ -11,13 +11,13 @@ body {
 }
 .header {
   display: flex;
-  height: 100px;
+  height: 60px;
   width: auto;
   padding:10px;
   background-color: rgb(0, 16, 32);
 }
 .header-image {
-  height: 100px;
+  height: 60px;
 }
 
 .logo-image {
@@ -35,7 +35,7 @@ body {
   flex-grow: 1;
   text-align: left;
   align-self: center;
-  font-size: 50px;
+  font-size: 40px;
   height: 55px;
   color:azure;
 }

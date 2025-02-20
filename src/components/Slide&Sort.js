@@ -111,20 +111,39 @@ const Game = () => {
   };
 
   return (
-    <div className="slidesort-container">
-      <div className="grid">
-        {blocks.map((block, index) => (
-          <div
-            key={index}
-            className={`block ${block.isEmpty ? 'empty' : ''}`}
-            onClick={() => !block.isEmpty && moveBlock(index)}
-          >
-            {block.isEmpty ? '' : block.value}
-          </div>
-        ))}
+    <div className='game-container'>
+      <div className="slidesort-container">
+        <div className="grid">
+          {blocks.map((block, index) => (
+            <div
+              key={index}
+              className={`block ${block.isEmpty ? 'empty' : ''}`}
+              onClick={() => !block.isEmpty && moveBlock(index)}
+            >
+              {block.isEmpty ? '' : block.value}
+            </div>
+          ))}
+        </div>
+        <button className="slidesort-button" onClick={initializeGrid}>Reset</button>
+        <div className="congrats">{congratsMessage}</div>
       </div>
-      <button onClick={initializeGrid}>Reset</button>
-      <div className="congrats">{congratsMessage}</div>
+      <div className="rules-container">
+        <h2>Game Rules</h2>  
+        <ul>
+          <li><strong>Grid Structure:</strong> A 3x3 grid consisting of 9 cells. 8 of these cells contain numbered blocks (1 to 8), and one cell is empty.</li>
+          <li><strong>Objective:</strong> The goal is to slide the numbered blocks into the correct order, from 1 to 8, by moving them into the empty cell. The empty cell allows you to move adjacent blocks.</li>
+          <li><strong>Initial State:</strong> The puzzle starts with the blocks shuffled randomly, and one cell is empty.</li>
+          <li><strong>Valid Moves:</strong> A block can be moved into the empty space if it is adjacent to the empty cell (up, down, left, or right).</li>
+          <li><strong>Winning Condition:</strong> The puzzle is solved when the blocks are arranged in the correct numerical order, from 1 to 8, with the empty space in the last position.</li>
+          <li><strong>Reset:</strong> Press the "Reset" button to start a new shuffled puzzle.</li>
+        </ul>
+        <h2>Buttons Guide</h2>
+        <ul>
+          <li>Click any numbered block to move it into the empty cell if it is adjacent.</li>
+          <li>Use the "Reset" button to shuffle the puzzle and start over.</li>
+        </ul>
+      </div>
+
     </div>
   );
 };

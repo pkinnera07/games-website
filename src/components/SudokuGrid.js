@@ -101,6 +101,18 @@ function SudokuGrid() {
     setInvalidRows(invalidRows);
     setInvalidCols(invalidCols);
     setInvalidSubgrid(invalidSubgrid);
+
+    // Set a timeout to reset invalid highlighting after 3 seconds
+    setTimeout(() => {
+      resetInvalidCells();
+    }, 3000); // 3 seconds delay
+  };
+
+  const resetInvalidCells = () => {
+    // Reset the invalid cells after the 3-second timeout
+    setInvalidRows([]);
+    setInvalidCols([]);
+    setInvalidSubgrid(false);
   };
 
   return (
@@ -113,8 +125,10 @@ function SudokuGrid() {
                 {row.map((cell, colIndex) => (
                   <td key={colIndex}>
                     <input
-                      type="text"
+                      type="number"
                       value={cell}
+                      min="1"
+                      max="9"
                       onChange={(e) => handleChange(e, rowIndex, colIndex)}
                       className={
                         // Highlight invalid rows or columns and fixed cells
@@ -145,8 +159,12 @@ function SudokuGrid() {
           <li><strong>No Duplicates:</strong> A number can appear only once in each row, column, and sub-grid.</li>
           <li><strong>Goal:</strong> The objective is to fill in the empty cells such that every row, column, and sub-grid contains the numbers 1-9 without repetition.</li>
         </ul>
+        <h2>Buttons Guide</h2>
+        <ul>
+          <li>Click to check if the filled sudoku is <strong>Valid</strong></li>
+          <li>Use the <strong>"New Game"</strong> button to start a <strong>fresh Sudoku</strong>.</li>
+        </ul>
       </div>
-
     </div>
   );
 }

@@ -1,11 +1,17 @@
 
-.slidesort-container {
+.game-container{
     display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+  }
+.slidesort-container {
+    font-family: Arial, sans-serif;
+    margin: 0px auto;
+    text-align: center;
     padding: 20px;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+    border-radius: 8px;
+    width: 40vw;
+  }
 
 .grid {
     display: grid;
@@ -14,6 +20,7 @@
     gap: 5px;
     width: 315px;
     height: 315px;
+    margin: 0px auto;
     background-color: #333;
     border: 2px solid #000;
     position: relative;
@@ -33,11 +40,6 @@
     cursor: pointer;
 }
 
-button {
-    width: 100px;
-    margin: 20px;
-}
-
 .empty {
     background-color: #ccc;
     border: none;
@@ -47,4 +49,21 @@ button {
     font-size: 24px;
     color: green;
     margin-top: 20px;
+}
+.slidesort-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(0, 16, 32);
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    width:150px;
+  }
+
+.slidesort-button:hover{
+    background-color: aliceblue;
+    color: rgb(0, 16, 32);
+    border: 2px solid rgb(0, 16, 32);
 }

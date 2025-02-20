@@ -5,7 +5,7 @@ import sudokuImage from '../assets/sudoku.png';
 import kakuroImage from '../assets/kakuro.png';
 import logo from '../assets/logo.png';
 import logoText from '../assets/logotext.png';
-import slideSortIcon from '../assets/slide&sort.png';
+import slideSortIcon from '../assets/slidesort.jpg';
 
 // Header component
 const Header = ({ onSearch }) => {
@@ -29,7 +29,6 @@ const GameBlock = ({ gameName, gameImage, gamePath }) => {
     <div className="game-block">
       <Link to={gamePath}>
         <img src={gameImage} alt={gameName} className="game-image" />
-        <h3>{gameName}</h3>
       </Link>
     </div>
   );
@@ -41,9 +40,9 @@ function LandingPage() {
 
   // Array of game data
   const games = [
-    { gameName: "Sudoku", gameImage: sudokuImage, gamePath: "/game/sudoku" },
-    { gameName: "Kakuro", gameImage: kakuroImage, gamePath: "/game/kakuro" },
-    { gameName: "Slide & Sort", gameImage: slideSortIcon, gamePath: "/game/slide&sort" }
+    { gameName: "Sudoku", gameImage: sudokuImage, gamePath: "/game/Sudoku" },
+    { gameName: "Kakuro", gameImage: kakuroImage, gamePath: "/game/Kakuro" },
+    { gameName: "Slide & Sort", gameImage: slideSortIcon, gamePath: "/game/Slide & Sort" }
   ];
 
   // Filter games based on search query (case-insensitive)
@@ -59,7 +58,7 @@ function LandingPage() {
           <h1 className="welcome">Welcome to</h1>
           <img src={logoText} alt="Games Website" className="logo-image" />
         </div>
-        <div className="game-grid">
+        <div className="games-grid">
           {filteredGames.map((game, index) => (
             <GameBlock 
               key={index} 

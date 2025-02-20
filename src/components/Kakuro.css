@@ -5,11 +5,10 @@
     text-align: center;
     padding: 20px;
     border-radius: 8px;
-    width: auto;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+    width: 40vw;
   }
   
-  .sum-game-container h2 {
+  .kakuro-game-container h2 {
     font-size: 24px;
     color: #333;
     margin-bottom: 20px;
@@ -18,7 +17,8 @@
   .kakuro-table {
     margin: 0 auto;
     border-collapse: collapse;
-    width: auto;
+    width: 360px;
+    height: 360px;
   }
   
   table td {
@@ -48,11 +48,15 @@
   .fixed {
     font-weight: bold;
     color: rgb(255, 255, 255);
-    background-color: #01335b;
+    background-color: rgb(0, 16, 32);
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+
+  .congrats-message {
+    color: #4CAF50 ;
   }
   
   .fixed.green {
@@ -81,4 +85,18 @@
     background-color: #4CAF50;
     color: white;
   }
+
+  .kakuro-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: rgb(0, 16, 32);
+    color: aliceblue;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    width:150px;
+    margin-inline: 20px;
+  }
+
   

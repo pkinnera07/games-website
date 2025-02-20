@@ -25,13 +25,13 @@ const Header = () => {
     <div className="game-page">
       <Header />
       {/* Conditionally render SudokuGrid if the game is Sudoku */}
-      {name === "sudoku" && <SudokuGrid />}
+      {name === "Sudoku" && <SudokuGrid />}
       
       {/* Conditionally render SumGame if the game is Sum Game */}
-      {name === "kakuro" && <Kakuro />}
+      {name === "Kakuro" && <Kakuro />}
 
       {/* Conditionally render Slide & Sort if the game is Slide & Sort */}
-      {name === "slide&sort" && <SlideSort />}
+      {name === "Slide & Sort" && <SlideSort />}
 
     </div>
   );
