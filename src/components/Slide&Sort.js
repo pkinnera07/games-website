@@ -22,7 +22,7 @@ const Game = () => {
     setBlocks(newBlocks);
     shuffleGrid(newBlocks);
     setCongratsMessage('');
-  }, []);
+  }, [shuffleGrid]);
 
   useEffect(() => {
     initializeGrid();
