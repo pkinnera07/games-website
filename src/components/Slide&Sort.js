@@ -6,6 +6,19 @@ const Game = () => {
   //const [emptyCell, setEmptyCell] = useState(null);
   const [congratsMessage, setCongratsMessage] = useState('');
 
+  const shuffleGrid = useCallback((newBlocks) => {
+    let shuffleMoves = 50; // Number of moves to shuffle
+    let shuffledBlocks = [...newBlocks];
+
+    for (let i = 0; i < shuffleMoves; i++) {
+      const possibleMoves = getPossibleMoves(shuffledBlocks);
+      const randomMove = possibleMoves[Math.floor(Math.random() * possibleMoves.length)];
+      shuffledBlocks = moveEmptyCell(shuffledBlocks, randomMove);
+    }
+
+    setBlocks(shuffledBlocks);
+  },[]);
+
   const initializeGrid = useCallback(() => {
     let numbers = [1, 2, 3, 4, 5, 6, 7, 8];
     let newBlocks = [];
@@ -28,18 +41,7 @@ const Game = () => {
     initializeGrid();
   }, [initializeGrid]);
 
-  const shuffleGrid = (newBlocks) => {
-    let shuffleMoves = 50; // Number of moves to shuffle
-    let shuffledBlocks = [...newBlocks];
-
-    for (let i = 0; i < shuffleMoves; i++) {
-      const possibleMoves = getPossibleMoves(shuffledBlocks);
-      const randomMove = possibleMoves[Math.floor(Math.random() * possibleMoves.length)];
-      shuffledBlocks = moveEmptyCell(shuffledBlocks, randomMove);
-    }
-
-    setBlocks(shuffledBlocks);
-  };
+  
 
   const getPossibleMoves = (blocks) => {
     const emptyIndex = blocks.findIndex(block => block.isEmpty);
