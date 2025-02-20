@@ -3,7 +3,7 @@ import './Slide&Sort.css';
 
 const Game = () => {
   const [blocks, setBlocks] = useState([]);
-  const [emptyCell, setEmptyCell] = useState(null);
+  //const [emptyCell, setEmptyCell] = useState(null);
   const [congratsMessage, setCongratsMessage] = useState('');
 
   useEffect(() => {
@@ -73,7 +73,7 @@ const Game = () => {
 
   const moveBlock = (index) => {
     const emptyIndex = blocks.findIndex(block => block.isEmpty);
-    const clickedBlock = blocks[index];
+    //const clickedBlock = blocks[index];
 
     const clickedRow = Math.floor(index / 3);
     const clickedCol = index % 3;
