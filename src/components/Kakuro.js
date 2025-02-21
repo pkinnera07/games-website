@@ -219,8 +219,8 @@ function SumGame() {
         </ul>
         <h2>Buttons Guide</h2>
         <ul>
-          <li>Click "Hint" to reveal the correct value of a random empty cell.</li>
-          <li>Use the "New Game" button to start a fresh puzzle.</li>
+        <li>Use the <strong>"New Game"</strong> button to start a fresh puzzle.</li>
+        <li>Click <strong>"Hint"</strong> to reveal the correct value of a random empty cell.</li>
         </ul>
       </div>
     </div>

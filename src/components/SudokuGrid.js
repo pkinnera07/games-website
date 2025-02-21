@@ -165,7 +165,7 @@ function SudokuGrid() {
         </ul>
         <h2>Buttons Guide</h2>
         <ul>
-          <li>Click to check if the filled sudoku is <strong>Valid</strong></li>
+          <li>Click <strong>"Check"</strong> to check if the filled sudoku is <strong>Valid</strong></li>
           <li>Use the <strong>"New Game"</strong> button to start a <strong>fresh Sudoku</strong>.</li>
         </ul>
       </div>

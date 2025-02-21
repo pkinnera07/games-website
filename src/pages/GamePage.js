@@ -1,21 +1,22 @@
 import React from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate  } from "react-router-dom";
 import SudokuGrid from "../components/SudokuGrid"; // Import SudokuGrid component
 import Kakuro from "../components/Kakuro"; // Import SudokuGrid component
 import SlideSort from "../components/Slide&Sort"; // Import SudokuGrid component
 import logo from '../assets/logo.png';
 
-
-
 function GamePage() {
   const { name } = useParams(); // Get the game name from the URL
   console.log(name);
 
-const Header = () => {
+  const navigate = useNavigate();
+
+  const Header = () => {
   return (
     <div className="header">
-      <img src={logo} alt="Games Website" className="header-image" />
+      <img src={logo} alt="Games Website" className="header-image" onClick={() => navigate("/")}/>     
       <h1 className="game-title">{name}</h1>
+      <button className="back-button" onClick={() => navigate("/")}>Home</button> {/* Back button */}
     </div>
   );
 };

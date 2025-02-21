@@ -1,6 +1,7 @@
 .landing-page {
     text-align: center;
     padding: 0px;
+    width: 100vw;
   }
 .site-layout {
   display: flex;
@@ -10,6 +11,8 @@
   padding: 20px;
   font-family:cursive;
   text-align: left;
+  font-size: 40px;
+  margin-bottom: 10px;
 }
 .captions{
   width: 40%;
@@ -40,15 +43,15 @@
   font-family:cursive;
   margin: 20px;
 }
-  .website-title {
-    flex-grow: 1;
-    text-align: left;
-    align-self: center;
-    font-size: 40px;
-    height: 45px;
-    color:azure;
-    background-color: transparent;
-  }
+.website-title {
+  flex-grow: 1;
+  text-align: left;
+  align-self: center;
+  font-size: 40px;
+  height: 45px;
+  color:azure;
+  background-color: transparent;
+}
 
   .search {
     width: 250px;
@@ -60,10 +63,6 @@
   }
   .search:focus {
     background-color: white;
-  }
-.welcome {
-    font-size: 40px;
-    margin-bottom: 10px;
   }
   
 ul {
@@ -80,7 +79,6 @@ li {
     flex-grow: 1;
     padding: 10px;
     overflow-x: auto;
-
 }
 
 .game-block {
@@ -105,3 +103,61 @@ li {
     border-radius: 10px;
 }
 
+@media (max-width: 768px) {
+  .site-layout {
+    flex-direction: column;
+    height: auto;
+  }
+  .welcome{
+    padding: 10px;
+    text-align: center;
+  }
+  .captions{
+    width: 100vw;
+    height: auto;
+  }
+  .logo-image {
+    height: 150px;
+  }
+  .website-title {
+    flex-grow: 1;
+    text-align: left;
+    align-self: center;
+    font-size: 20px;
+    height: auto;
+    color:azure;
+    background-color: transparent;
+  }
+  
+  .search {
+    width: 100px;
+    align-self: center;
+    height: 33px;
+    margin-right: 0px;
+    font-size: 10px;
+    background-color: #e3eaf1dd;
+    border-radius: 15px;
+  }
+
+  .games-grid {
+    flex-direction: column;
+}
+
+.game-block {
+    border: none;
+    padding: 10px;
+    text-align: center;
+    align-self: center;
+    cursor: pointer;
+    height: fit-content;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+.game-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+}

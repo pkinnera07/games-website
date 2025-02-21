@@ -4,10 +4,10 @@
   flex-direction: row;
 }
 .sudoku-container {
-    text-align: center;
-    padding: 0px;
-    width: 40vw;
-    margin-top: 20px;
+  text-align: center;
+  padding: 0px;
+  width: 40vw;
+  margin-top: 20px;
   }
   .rules-container {
     width: 60vw;
@@ -17,12 +17,12 @@
     flex-grow: 1;
     overflow-y: auto;
     text-align: left;
-    border: 3px solid black;
+    border: 3px solid rgb(0, 16, 32);
   }
   
 h2{
   text-align: center;
-  background-color: #000;
+  background-color: rgb(0, 16, 32);
   color: aliceblue;
 }
   input[disabled] {
@@ -76,7 +76,45 @@ h2{
     margin-inline: 20px;
   }
   
-  .sudoku-button:hover {
-    background-color: #45a049;
+.sudoku-button:hover {
+  background-color: aliceblue;
+  color: rgb(0, 16, 32);
+  border: 2px solid rgb(0, 16, 32);
+}
+@media (max-width: 768px) {
+  .game-container{
+    flex-direction: column;
+    align-self: center;
+    padding: 10px;
+    width: 100vw;
   }
+  .sudoku-container {
+    text-align: center;
+    padding: 0px;
+    width: 100%;
+    align-self: center;
+    margin-top: 20px;
+  }
+  .rules-container {
+    width: 90vw;
+    align-self: center;
+  }
+  .sudoku-grid-table input {
+    width: 35px;
+    height: 35px;
+    text-align: center;
+  }
+  .sudoku-grid-table {
+    align-self: center;
+    margin-inline: auto;
+  }
+  .sudoku-button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 10px;
+    font-weight: bold;
+    width:120px;
+    margin-inline: 20px;
+  }
+}
   

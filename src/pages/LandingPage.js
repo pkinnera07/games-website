@@ -11,12 +11,14 @@ import slideSortIcon from '../assets/slidesort.jpg';
 const Header = ({ onSearch }) => {
   return (
     <div className="header">
-      <img src={logo} alt="Games Website" className="header-image" />
+      <Link to={LandingPage}>
+        <img src={logo} alt="Games Website" className="header-image" />
+      </Link>
       <h2 className="website-title">Game Dimension</h2>
       <input 
         className="search" 
         type="text" 
-        placeholder="Search your Favourite Game" 
+        placeholder="Search Games Here" 
         onChange={e => onSearch(e.target.value)} // Trigger search on input change
       />
     </div>
