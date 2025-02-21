@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import './LandingPage.css'; 
 import sudokuImage from '../assets/sudoku.png';
 import kakuroImage from '../assets/kakuro.png';
+import moreGames from '../assets/moregames.jpg';
 import logo from '../assets/logo.png';
 import logoText from '../assets/logotext.png';
 import slideSortIcon from '../assets/slidesort.jpg';
@@ -44,7 +45,8 @@ function LandingPage() {
   const games = [
     { gameName: "Sudoku", gameImage: sudokuImage, gamePath: "/game/Sudoku" },
     { gameName: "Kakuro", gameImage: kakuroImage, gamePath: "/game/Kakuro" },
-    { gameName: "Slide & Sort", gameImage: slideSortIcon, gamePath: "/game/Slide & Sort" }
+    { gameName: "Slide & Sort", gameImage: slideSortIcon, gamePath: "/game/Slide & Sort" },
+    { gameName: "More Games", gameImage: moreGames, gamePath: "/" }    
   ];
 
   // Filter games based on search query (case-insensitive)
