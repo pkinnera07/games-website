@@ -5,7 +5,7 @@ import sudokuImage from '../assets/sudoku.png';
 import kakuroImage from '../assets/kakuro.png';
 import moreGames from '../assets/moregames.jpg';
 import logo from '../assets/logo.png';
-import logoText from '../assets/logotext.png';
+import logoText from '../assets/textlogo.png';
 import slideSortIcon from '../assets/slidesort.jpg';
 
 // Header component

@@ -192,7 +192,7 @@ function SumGame() {
                         onChange={(e) => handleInputChange(rowIndex, colIndex, e)}
                         min="1"
                         max="9"
-                        style={{ width: '50px', height: '50px', textAlign: 'center' }}
+                        style={{ textAlign: 'center' }}
                       />
                     )}
                   </td>

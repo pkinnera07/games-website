@@ -10,9 +10,10 @@
 .welcome{
   padding: 20px;
   font-family:cursive;
-  text-align: left;
-  font-size: 40px;
+  text-align: center;
+  font-size: 45px;
   margin-bottom: 10px;
+  color: azure;
 }
 .captions{
   width: 40%;
@@ -20,7 +21,7 @@
   align-self: center;
 }
 .logo-image {
-  height: 200px;
+  height: 220px;
 }
 .cap1 {
   text-align: left;
@@ -83,13 +84,14 @@ li {
 }
 
 .game-block {
-    border: 3px solid rgb(0, 16, 32);
     padding: 10px;
     text-align: center;
     align-self: center;
     cursor: pointer;
     height: fit-content;
     border-radius: 10px;
+    width: fit-content;
+    background-color: rgba(240, 255, 255, 0.653);
     transition: transform 0.3s ease;
 }
 
