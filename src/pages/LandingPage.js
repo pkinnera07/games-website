@@ -4,8 +4,7 @@ import './LandingPage.css';
 import sudokuImage from '../assets/sudoku.png';
 import kakuroImage from '../assets/kakuro.png';
 import moreGames from '../assets/moregames.jpg';
-import logo from '../assets/logo.png';
-import logoText from '../assets/textlogo.png';
+import logo from '../assets/logo-text.png';
 import slideSortIcon from '../assets/slidesort.jpg';
 
 // Header component
@@ -60,7 +59,7 @@ function LandingPage() {
       <div className="site-layout">
         <div className="captions">
           <h1 className="welcome">Welcome to</h1>
-          <img src={logoText} alt="Games Website" className="logo-image" />
+          <img src={logo} alt="Games Website" className="logo-image" />
         </div>
         <div className="games-grid">
           {filteredGames.map((game, index) => (

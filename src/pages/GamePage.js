@@ -3,7 +3,7 @@ import { useParams, useNavigate  } from "react-router-dom";
 import SudokuGrid from "../components/SudokuGrid"; // Import SudokuGrid component
 import Kakuro from "../components/Kakuro"; // Import SudokuGrid component
 import SlideSort from "../components/Slide&Sort"; // Import SudokuGrid component
-import logo from '../assets/logo.png';
+import logo from '../assets/logo-text.png';
 
 function GamePage() {
   const { name } = useParams(); // Get the game name from the URL

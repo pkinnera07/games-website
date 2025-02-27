@@ -24,8 +24,9 @@
     justify-content: center;
     align-content: center;
     border-radius: 5px;
-    background-color: rgb(0, 16, 32);
+    background-color: rgba(0, 16, 32, 0.388);
     position: relative;
+    border: 2px solid azure;
 }
 
 .block {
@@ -43,7 +44,7 @@
 }
 
 .empty {
-    background-color: rgb(0, 16, 32);
+    background-color: rgba(0, 16, 32, 0.071);
     border: none;
 }
 
