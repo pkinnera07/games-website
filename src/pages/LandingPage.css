@@ -120,13 +120,13 @@ li {
     height: auto;
   }
   .logo-image {
-    height: 150px;
+    height: 250px;
   }
   .website-title {
     flex-grow: 1;
     text-align: left;
     align-self: center;
-    font-size: 25px;
+    font-size: 20px;
     height: auto;
     color:azure;
     background-color: transparent;
@@ -135,22 +135,22 @@ li {
   .search {
     width: 100px;
     align-self: center;
-    height: 33px;
+    height: 25px;
     margin-right: 0px;
     font-size: 10px;
     background-color: #e3eaf1dd;
     border-radius: 15px;
   }
 
-  .games-grid {
-    display: flex;
-    flex-direction: column;
+  .games-grid { 
+    gap: auto;
+    margin-inline: auto;
 
   }
 
   .game-block {
     border: 2px solid rgb(0, 16, 32);
-    padding: 10px;
+    padding: 5px;
     text-align: center;
     align-self: center;
     cursor: pointer;
@@ -159,8 +159,8 @@ li {
     transition: transform 0.3s ease;
   }
   .game-image {
-    width: 200px;
-    height: 200px;
+    width: 120px;
+    height: 120px;
     object-fit: cover;
     border-radius: 10px;
   }
